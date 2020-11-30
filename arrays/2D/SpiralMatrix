@@ -1,0 +1,45 @@
+//Given a matrix of m * n elements (m rows, n columns), return all elements of the matrix in spiral order.
+//https://www.youtube.com/watch?v=siKFOI8PNKM&feature=emb_err_woyt
+
+public class Solution {
+    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
+    public int[] spiralOrder(final int[][] A) {
+        int rowTopIndex = 0;
+        int rowBottomIndex = A.length-1;
+        int columnLeftIndex = 0;
+        int columnRightIndex = A[0].length-1;
+        
+        int[] spiralElements = new int[rowBottomIndex *columnRightIndex ];
+                int j= 0;
+        
+        while(rowTopIndex <= rowBottomIndex && columnLeftIndex <= columnRightIndex){
+            //Traverse right
+            for(int i= columnLeftIndex;i<columnRightIndex;i++,j++){
+            spiralElements[j] = A[rowTopIndex][i];
+            }
+            rowTopIndex++;
+            
+            //Traverse down
+            for(int i= rowTopIndex;i<rowBottomIndex;i++,j++){
+                spiralElements[j] = A[i][columnRightIndex];
+            }
+            columnRightIndex--;
+            
+            //Traverse left
+             for(int i= columnRightIndex;i>columnLeftIndex;i--,j++){
+            spiralElements[j] = A[rowBottomIndex][i];
+            }
+            rowBottomIndex--;
+            
+            //Traverse Up
+             for(int i= rowBottomIndex;i>rowTopIndex;i--,j++){
+                 spiralElements[j] = A[i][columnLeftIndex];
+            }
+            columnLeftIndex++;
+            
+        }
+        
+        return spiralElements;
+        
+    }
+}
