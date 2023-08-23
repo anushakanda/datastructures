@@ -1,0 +1,38 @@
+/**
+Given a non-negative number represented as an array of digits, add 1 to the number ( increment the number represented by the digits ).
+
+The digits are stored such that the most significant digit is at the head of the list.
+
+NOTE: Certain things are intentionally left unclear in this question which you should practice asking the interviewer. For example: 
+for this problem, following are some good questions to ask :
+
+Q : Can the input have 0's before the most significant digit. Or in other words, is 0 1 2 3 a valid input?
+A : For the purpose of this question, YES
+Q : Can the output have 0's before the most significant digit? Or in other words, is 0 1 2 4 a valid output?
+A : For the purpose of this question, NO. Even if the input has zeroes before the most significant digit.
+
+
+Problem Constraints
+1 <= |A| <= 106
+0 <= Ai <= 9
+**/
+public class Solution {
+    public int[] plusOne(int[] A) {
+        
+    ArrayList<Integer> ans = new ArrayList<>();  
+    int carry=1;  
+    int val=0;  
+    for(int i=A.length-1;i>=0;i--){  
+        val=(A[i]+carry)%10;  
+        carry=(A[i]+carry)/10; 
+        ans.add(0,val);  
+    }
+      
+    if(carry==1)  
+    ans.add(0,carry);  
+    
+    while(ans.get(0)==0) { ans.remove(0); }
+    
+    return ans.stream().mapToInt(i -> i).toArray();    
+    }
+}
