@@ -27,3 +27,10 @@ public class Solution {
         return prev;   
     }
 }
+
+//Following are the steps to be followed to reverse a LinkedList. Create 3 instances: current, next, previous. Loop the following till current is NOT null:
+
+//Save the next Node of the current element in the next pointer.
+//Set the next of the current Node to the previous. This is the MVP line.
+//Shift previous to current.
+//Shift the current element to next.
