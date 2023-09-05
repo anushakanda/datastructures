@@ -1,4 +1,4 @@
-public class Stack {
+public class LinkedListImplStack {
   private static class Node{
     int data;
     Node next;
