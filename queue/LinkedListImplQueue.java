@@ -2,7 +2,7 @@
 * Queue: FIFO
 * https://www.youtube.com/watch?v=wjI1WNcIntg
 /**
-public class Queue {
+public class LinkedListImplQueue {
 
 public sttaic class Node {
    int data;
