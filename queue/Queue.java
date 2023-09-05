@@ -42,12 +42,12 @@ private Node tail; //Add elements from here.
     if(head == null){
       // Queue is Empty.
     }
-    int return = head.data;
+    int value = head.data;
     head = head.next;
      if(head == null){
      tail == null;
     }
-    
+    return value;
   }
   
 
