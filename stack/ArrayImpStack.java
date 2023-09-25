@@ -9,24 +9,24 @@ public class ArrayImplStack {
   }
 
   public int peek(){
-    if(i==-1){
+    if(top==-1){
       //Stack is empty
     }
-    return data[i];
+    return data[top];
   }
 
   public void push(int data){
-    if(i+1 == MAX_SIZE){
+    if(top+1 == MAX_SIZE){
       //Overflow
       //Throw exception or
       //Dynamic array.Double the size of array.Copy the elements from old to new array.
     }
-    i = i+1;
-    data[i] = data;
+    top = top+1;
+    data[top] = data;
   }
 
   public int pop(){
-    if(i==-1){
+    if(top==-1){
       //Stack is empty.
     }
     int value = data[i];
