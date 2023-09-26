@@ -1,5 +1,13 @@
 /**
 * https://www.youtube.com/watch?v=oSWTXtMglKE
+*
+* How is a tree represented in the memory?
+* Each node will contain three parts,
+* - data part, 
+* - address of the left subtree, and 
+* - address of the right subtree. 
+* If any node does not have the child, then both link parts will have NULL values.
+* <img src="https://static.javatpoint.com/ds/images/tree-vs-graph-data-structure2.png" alt="Tree vs Graph data structure"/>
 **/
 class Node {
   Node left,right;
