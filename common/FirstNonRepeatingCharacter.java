@@ -5,6 +5,11 @@
 * Method 2 – This method uses Linked Hashmap
 * Method 3 – This method uses Set and ArrayList
 * Method 4 – This method uses Java 8
+* 
+* Edge Cases:
+* String is null or empty
+* Uppercase and lowercase characters
+* No non repeating character.
 **/
 public class FirstNonRepeatingCharacter{
   void usingIndex(String inputStr)
