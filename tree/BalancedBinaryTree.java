@@ -1,6 +1,6 @@
 /**
 * Balanced Binary Tree is the one for which every nodes height(left)-height(right)<=1;
-* 
+* Ref: take U forward channel
 **/
 public class BalancedBinaryTree {
  public boolean isBalancedTree(Node root){
