@@ -34,3 +34,18 @@ public class Solution {
 //Set the next of the current Node to the previous. This is the MVP line.
 //Shift previous to current.
 //Shift the current element to next.
+public class ReverseSingleLinkedList{
+    public Node reverse(Node head){\
+        if(head == null || head.next == null) return;
+
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+        while(current!=null){
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
+    }
+}
