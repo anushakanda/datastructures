@@ -42,6 +42,7 @@ public class ReverseSingleLinkedList{
         Node current = head;
         Node next = null;
         while(current!=null){
+            next = current.next;
             current.next = prev;
             prev = current;
             current = next;
