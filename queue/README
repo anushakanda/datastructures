@@ -1,0 +1,12 @@
+- FIFO - First In First Out
+- Operations: enqueue(),dequeue(),size(),isEmpty(), peek
+- Applications:
+  * Single Resource and multiple consumers
+  * Synchronization b/w slow and fast devices
+  * In Operating systems(CPU Scheduling, buffer from devices like keyboard)
+  * In COmputer Networks(Routers/Switches and Mail Queues)
+- Varitaions:
+ * Deque
+ * Priority Queue
+ * Double Ended Priority Queue
+
