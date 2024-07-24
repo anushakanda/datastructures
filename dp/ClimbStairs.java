@@ -52,5 +52,26 @@ class climbStairs(){
 
          return second;
     }
+
+    // Approach 5: BackTracing.
+    //If we want to know all possible paths.
+    // T:0(2^N), S:0(N)(stack space) +s(N)
+    public int climbStairs(int n) {
+           String path = "";
+           List<String> allPaths = new ArrayList<>();
+           climbStairs(0, n, path,allPaths);
+           return  allPaths.size();
+    }
+
+     void climbStairs(int cIndex, int n, String path, List<String> allPaths){
+        if(cIndex == n){
+          allPaths.add(path);
+        }
+
+        if(cIndex > n) return;
+
+        climbStairs(cIndex+1, n, path+cIndex+1, allPaths);
+        climbStairs(cIndex+2, n, path+cIndex+2, allPaths);
+    }
 }
 
