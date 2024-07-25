@@ -106,4 +106,19 @@ public static int frogJump(int n, int heights[]) {
        return dp[n-1];
     }
 
+// Approach 5: Space optimization
+ public static int frogJump(int n, int heights[]) {
+       int prev2 = 0;
+       int prev1 = Math.abs(heights[1]-heights[0]); 
+
+       for(int i=2;i<n;i++){
+           int first = prev1+Math.abs(heights[i]-heights[i-1]);
+           int second = prev2+Math.abs(heights[i]-heights[i-2]);
+           int current = Math.min(first,second);
+           prev2 = prev1;
+           prev1 = current;
+       }
+       return prev1;
+    }
+
 
